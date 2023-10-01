@@ -1,0 +1,177 @@
+{
+  "version": 4,
+  "terraform_version": "1.5.7",
+  "serial": 36,
+  "lineage": "3fe15e14-035b-a8c0-81ef-688cfcd090e8",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "Marius_S_rg",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/3a42b7ad-f305-4fa5-9a8a-9310a9c7f4ad/resourceGroups/Marius_S_rg",
+            "location": "eastus",
+            "name": "Marius_S_rg",
+            "tags": {},
+            "timeouts": {
+              "create": null,
+              "delete": null,
+              "read": null,
+              "update": null
+            }
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjo1NDAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIwIn0="
+        }
+      ]
+    },
+    {
+      "module": "module.cluster",
+      "mode": "managed",
+      "type": "azurerm_kubernetes_cluster",
+      "name": "cluster",
+      "provider": "module.cluster.provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "aci_connector_linux": [],
+            "api_server_authorized_ip_ranges": [],
+            "auto_scaler_profile": [],
+            "automatic_channel_upgrade": "",
+            "azure_active_directory_role_based_access_control": [],
+            "azure_policy_enabled": false,
+            "default_node_pool": [
+              {
+                "enable_auto_scaling": false,
+                "enable_host_encryption": false,
+                "enable_node_public_ip": false,
+                "fips_enabled": false,
+                "kubelet_config": [],
+                "kubelet_disk_type": "OS",
+                "linux_os_config": [],
+                "max_count": 0,
+                "max_pods": 110,
+                "min_count": 0,
+                "name": "agentpool",
+                "node_count": 2,
+                "node_labels": {},
+                "node_public_ip_prefix_id": "",
+                "node_taints": [],
+                "only_critical_addons_enabled": false,
+                "orchestrator_version": "1.26.6",
+                "os_disk_size_gb": 128,
+                "os_disk_type": "Managed",
+                "os_sku": "Ubuntu",
+                "pod_subnet_id": "",
+                "proximity_placement_group_id": "",
+                "tags": {},
+                "type": "VirtualMachineScaleSets",
+                "ultra_ssd_enabled": false,
+                "upgrade_settings": [],
+                "vm_size": "Standard_DS2_v2",
+                "vnet_subnet_id": "",
+                "zones": []
+              }
+            ],
+            "disk_encryption_set_id": "",
+            "dns_prefix": "Marius-dns",
+            "dns_prefix_private_cluster": "",
+            "enable_pod_security_policy": false,
+            "fqdn": "marius-dns-dk9rt2l3.hcp.eastus.azmk8s.io",
+            "http_application_routing_enabled": false,
+            "http_application_routing_zone_name": "",
+            "http_proxy_config": [],
+            "id": "/subscriptions/3a42b7ad-f305-4fa5-9a8a-9310a9c7f4ad/resourceGroups/Marius_S_rg/providers/Microsoft.ContainerService/managedClusters/Marius_KC",
+            "identity": [
+              {
+                "identity_ids": [],
+                "principal_id": "b9179418-7c18-4813-a5bf-e1949aadd31a",
+                "tenant_id": "025f275e-d826-4473-82b9-e40a4925777c",
+                "type": "SystemAssigned"
+              }
+            ],
+            "ingress_application_gateway": [],
+            "key_vault_secrets_provider": [],
+            "kube_admin_config": [],
+            "kube_admin_config_raw": "",
+            "kube_config": [
+              {
+                "client_certificate": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUZIVENDQXdXZ0F3SUJBZ0lRVyt5RmlIMkVhYmU0UlJPWm9DSFRXVEFOQmdrcWhraUc5dzBCQVFzRkFEQU4KTVFzd0NRWURWUVFERXdKallUQWVGdzB5TXpFd01ERXhNREV6TXpkYUZ3MHlOVEV3TURFeE1ESXpNemRhTURBeApGekFWQmdOVkJBb1REbk41YzNSbGJUcHRZWE4wWlhKek1SVXdFd1lEVlFRREV3eHRZWE4wWlhKamJHbGxiblF3CmdnSWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUNEd0F3Z2dJS0FvSUNBUUNzUC9LWHBrcUpmMEIwdFgwbjc4bnMKZWh5OExURmdIeXJ3M1UzK1ZKYWxWUWR3WmgvMkU3TVRZZkpRc0Fzai9pZXlmbVlCZlIwZi9nQzZGQ0REclRyVwp3QWRsRExjbnlLeFNXVndIaHVkdEI3dDFFWFRSVjRhbHJpaldnQTVJWWpZME1IN2JNRll6VndZSzJWdTNqSkx2CnJYcFJyeDJuQ3FGbHdTY2NSV2xybk13STd1cTlNN1RJeHIrelpRbDNIb2g4ellZa2FFaDZ2STd0cUlVTUFEQmgKZ0kwZFdocENLSVU3UG5ubk5sejJORCtKOXpzTEhjTWhocEl4SG54UXlkNWp6QUx4UVpBK1Q5N0xQNWVoZysrbApoemVjTzJWd2p2a0JsdEdGVEQrWWZRQU4rZCtpWDZHbVMweTRQa0MwczNvVmhwWTk2NTljbHJ1UGNlNkYxbFk5CjJHbXNOZXQ4ZUlwbDRjbDZ3WVFxQ1VXWnBISy9BbW9zTllvSFZ6Tmx1Ym1OMkp3WWMwQmFwSm5NVUJFSkFqUWYKUSt1WjUvM2NreDZKRzlicmE3MjF6NnBnMk8weVAvTW02Sm1lUFU0V2tkTHI3UndEZGRBTTdtQk95VUpvaHI2VApIOUVhdHpnRkc0VjFqTlZHK0xxeXNSWEtxbWJmSTBrN1pWcGJFa1BzTWhJSXR3N0ZIWjd0aFJHRHVVZ2tJbW9jCmJPRmFxYW90blVBdlcvaTc1OFlZOWFoL0Q5WWs1SWc5aXM0ditpMk9zbHJ6cmFLUHZRWDYrSmxoV1ZqaWFjT3oKS0RQSWdHVUVMcmg2blpZZWNRZWZybXVLVm84bS93d2NSV1I2UmtxYjZGT0c0Njc1VkJUYVJTcTZHOG9GTmlYVgpPdTJaWHV6U1cvbWRoS2V4OSt4WGx3SURBUUFCbzFZd1ZEQU9CZ05WSFE4QkFmOEVCQU1DQmFBd0V3WURWUjBsCkJBd3dDZ1lJS3dZQkJRVUhBd0l3REFZRFZSMFRBUUgvQkFJd0FEQWZCZ05WSFNNRUdEQVdnQlFuN2NLYWE4eXAKbzY3NWlGMzlHZHhnVGZtS2lUQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FnRUFHemNJZXREL3VGQkRsTkNDdU9zZQpac01IaldvVVRoWWVGSHd3TDJFcVpxNjFaZmFpbDlXeC9hZlVkSlhjMnM0ZFpmc0RLb1NJYVNyTlJ4VEdrMjRUCmpySlIwTjdFd0hrQ016ckpINFRCSGZLSUZpeUQ1T1ZaR2F3bU9lZ2FYbmI0VGRydkNZN3RBOHhyQXd0UmNtZVEKR2lhOXZxenEyMmsreDBjVXlQcnBZWXpGNys5QW5wdDhPSGZYaEhNdDdnMS9ZUXplN0lrQTFBSnR0Nk5YZEZhSApURkx1TDJnbUZJNXpuaFh1a0hBQk1mZyt0WE43WjJSTGFPLzBVUjRzVkNrczJEdkF1d0RMZXJVeUNsYklXV0RBClBiakh4dEltM1Q1YS9UWDUreFZBNTYyNUR4OVVCVk50L3FOTm5NVGd3MkJZSzBGZ3M3L3B6elNNVEV2a2NZcnIKNHFLU2VTOUNmaTZKY0pMWGEvY29WTEwxa0doWDl1L3Z1NFQwUGlBSFVxQXQ5TUZqUTJUaUlhT3EvVWt4cnlVYgpEQmUrajczRHVCZGNaVnB5ODNYSTRPaVFqcTFacEJiVGU3S2RRaHVRbjJ3eFc4VkMxNlh6UnFBcEYwanFBOW80ClQxcmszZkJYTjdzNUpwSmpjSTl1ays1cmtvRDdnQWEvczdFVGdzWFhkb1NQYk9WRWFGY05uSlBVTFp1WEdSYXkKRWdmR3FSSDBPUHliY3JiNDBhS29zVXFMWlF4bXhWbU1WbmxXMjB4RFBWSkpRMHZkNUxoVFBFQ1BPOHMrNVVKSApwaFVxVkRrRFhDRDBrSk5BeHlwYU03dHhETWpYQnBJRGxDUUVtd3FTenhaV1RtTE51YTQrbDNRcWkxRlNwVnJaCnBqMmxJL0RvQjhXUXRPd1dyRzhiT3p3PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==",
+                "client_key": "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlKS3dJQkFBS0NBZ0VBckQveWw2WktpWDlBZExWOUorL0o3SG9jdkMweFlCOHE4TjFOL2xTV3BWVUhjR1lmCjloT3pFMkh5VUxBTEkvNG5zbjVtQVgwZEgvNEF1aFFndzYwNjFzQUhaUXkzSjhpc1VsbGNCNGJuYlFlN2RSRjAKMFZlR3BhNG8xb0FPU0dJMk5EQisyekJXTTFjR0N0bGJ0NHlTNzYxNlVhOGRwd3FoWmNFbkhFVnBhNXpNQ083cQp2VE8weU1hL3MyVUpkeDZJZk0yR0pHaEllcnlPN2FpRkRBQXdZWUNOSFZvYVFpaUZPejU1NXpaYzlqUS9pZmM3CkN4M0RJWWFTTVI1OFVNbmVZOHdDOFVHUVBrL2V5eitYb1lQdnBZYzNuRHRsY0k3NUFaYlJoVXcvbUgwQURmbmYKb2wraHBrdE11RDVBdExONkZZYVdQZXVmWEphN2ozSHVoZFpXUGRocHJEWHJmSGlLWmVISmVzR0VLZ2xGbWFSeQp2d0pxTERXS0IxY3paYm01amRpY0dITkFXcVNaekZBUkNRSTBIMFBybWVmOTNKTWVpUnZXNjJ1OXRjK3FZTmp0Ck1qL3pKdWlabmoxT0ZwSFM2KzBjQTNYUURPNWdUc2xDYUlhK2t4L1JHcmM0QlJ1RmRZelZSdmk2c3JFVnlxcG0KM3lOSk8yVmFXeEpEN0RJU0NMY094UjJlN1lVUmc3bElKQ0pxSEd6aFdxbXFMWjFBTDF2NHUrZkdHUFdvZncvVwpKT1NJUFlyT0wvb3RqckphODYyaWo3MEYrdmlaWVZsWTRtbkRzeWd6eUlCbEJDNjRlcDJXSG5FSG42NXJpbGFQCkp2OE1IRVZrZWtaS20raFRodU91K1ZRVTJrVXF1aHZLQlRZbDFUcnRtVjdzMGx2NW5ZU25zZmZzVjVjQ0F3RUEKQVFLQ0FnRUFqMmVGN3QrUk9ydm95OEcxZXlSVnRqMUw0eGEwL3RPMENtZ1U0T05Ic0VvRU1YMjBxa2hvVklDOQpIcFFTRWxzc2JaeHlERmMvZ2owVUdkZGNGODBIS1hjaU1PelBKNTRZYVU3Z0lad2MzRmNOcUQ5cVJFZGNZRitJCnZGeE1oOUxNVWRMMktrSXA0Z0JYbFh5MHNUR2x1MGx3aHNVR0tPWGV6VHByOTB1S292OGRsMnBob0RlR0VZbjIKVzhLSWlOV3d5RWJMb1UvNDE4WllNR0NXdEJFTU5vQ3grM2ZpV0tZbmxkVkQ1RTBNUkNYbnFGTmVvcmlhbGpUVgpUWE9XQ0NTb3MrbExvZFAxNVFyVjc5ejN2bzU3WEJJaEtEOERDeHpkRG9lajFCaFE4Z0ZQcEZNZDdxOHpnNkU1Ck5FTVAxK0Y4aUtOT1Bpc0d1Q3o5NWtUeVVoYktJTUZuditkNGkwOXNLamZwaUp0cTlPVWUxcE0zV0VkQzNmU2kKV3VQOS9WdDlKZmlIUlFoUUFTS3hKTGVOckt1NXpwdW83SUlad0VublAvdzRyMjlMSXNtVjFSNUY2VitmWFZTNwpjaWZhdlhmeGZyQUJvQ1JRMkdJcnUwVDFTQzduY2VmZU1Vb2pYRmdrMURJcnRaeXlBNXRNVGtBSVIvNE12OXVpCnBOR0xFbzFlRHBUUDIzajNSWXBNaUh0aG1sYTh4OW1KdGxrYUxaM3RVaTd5QmIvQXhiQTN1aEx2SUdBb3A1Uk4KVkxFMHppQUpKK1J2Umh0UVVaZC9WM2pGMlNramZETTFjZ3hKZHlwN01VRVJpWXlvNVlKUmV3WU12M2JJbVVaYQpleGI3eStnYUd1R3lvWkNqQk9hTkxGYlJ5TFZFZGlydVFlZUgrYlhON2tkNEx6eDlObEVDZ2dFQkFNMVYyYjNjCks5bW9CYWY0d1lwK1pxNzJleDRCR201amZWemJnT1A1WHFNQ1FmV2RMUFI0RGIxaTdzUGVlaCtUMDh4SVlZdjMKb1NRd3hNWVpmN21aV0dlQjF6bFoyc0RJOEZONzFWaGV0WjBvNTFobk50ekJXdFE2blRtMXNoektpQnRpNkl2NgpXS2RkYWFLOG5NdVhKTWxWSmZhcGdGdmVCQi9TdEpHaU8yNjA5VGQxSHUzdXJVblg5L3RtUmp0YUNkRkhPZkN0Ckd4UkVNeFlVRTM4UndyZCtwcERVazRBUk1GZXptbWFmWGJBYW82bFAvZXBQN2Q0RWlxT1JTcUxobDN6K01tNzYKaUJiY1FDVkxHeXJTcnpBUlFNOTA5aEUraStEVUQxbitXU1B1TkVJNURVNkpOZ2FXZHhsTkliaCsybExBejVldAp3N2Jwbm9SQkRTbXpqV3NDZ2dFQkFOYkFPWlVCdmdSeXBQaXFKT2lZTndSeXgzaWhuWWN6MHFYbEljS1UzYm93CmJPRzVJQWNmM1FrUGVaUWJNUDVhWktXSk9lY3FtaDRnZWtWYVJkbmNjQUNSUkdFdjVNcUYzRXA1U3FYTDZUdlYKL00zVlhxaEYrUGJIY2ZRM2VWVnV3RjlMSkZoUlZ3SEtVY0RtM2Fkd29iQ0ozTnpaQmpRYnJkZi81SDI1SHhZdQpyR1R5dGF6VDNwZy9Db2JraUhybVRYUEhlSkh6REE5TXg1VGxCVU5SSFhBYlhYWTFOZGpsQi9wTW41KzZoaFFjCnJGUFRnREtRbXdHL1Y4Wk1ZaldiK2Z5c0EzVGJ6QVAwbTlxYzY5ZUlMRkd3d0xrbHRSVmRhSWtINHJ6NG0vaGgKMFdnejdkT29pVm81T2FLa0UrTThhNHMxRzVQN3Fvb0o3S1BuQjZiTVhZVUNnZ0VCQUkvOUpOeTd1VkEvUUFBagpNMjB2NkVmRzlsejYveExyMTJ3M1RQSVEyNmxKbXdGbWY3RExReTlNWWd5ZVJWdEJhYU4yR2xseGcrR0NCV3E1ClZOVE0wSzU4NFhVSktwcElEaWNzemxYU3pGNXg0WkVmaDl4VUJxS09tOVJ0TW9KNEQrdk1kekE1bE5PQWNPUTYKaVdWSER2ZlVLdlFHdHNrMUxnVTIxNExNbGdxekFNWXI3azJCTXFsMnRpSG4vVlgvZEtUNTRvcUFpVjJ6MlhNaApEdTdyZ0hUMmJrMWZsRE9aV2lJV0F5NzFrRmcreGdlajNYWGpLUFdvajZQVjdkVzhobU9UU2NDREZNMmJFNnhUCk43RFczeHpBN0liT0NRUGNyWEF5cExWQjVEYUxBc0J4aTRCSVBjZHUyZ08zRCs5MW5SbXN0YVl5cHV6c2RFbGYKNktBV2xoTUNnZ0VCQUs4MXVrVkdYS0FJWVd5NGROQ0lrQ3JDOHRnTEZCbGhRTFkxVWV3TnhUSEpuS3cxZkZvVAp0eVZUU09CN3B1ZC9IS3FxWVdHbnNvSnVBUlJnYUtrdFh2dzNpVkM1NExNVHIvM2JJL3BOZWdkbHVaSytTVEtGCmxIRFRuTGVpSXc1L0E5azcxM1Z2Tjh1d0pDOThyTStWNTNXL3BVRlNsK3Nmd2lCL0dROHlZSmlhai9EMHpTRXEKNDJ2WDAyRG5TQ3J0aDdlMHdUeGl6aTRWZUtpVWlreTMrNHFoNlFrdXRMWTNkdURTYjFIRXZ1dmQwUU83aGRhNwpnSnhXWHVqZEhTdWNETVFJRy9IVitvZ25wSmtpZXBFbyt1L1RoQW9MSjhrOG9yTmFpYldnS0xEb0xoQVVmaSs0ClRBZ2V0RlZzQlFYYkgrczk4emd6bHBwMUttczNiVmk3V0hrQ2dnRUJBS3lWTjIya3dRUjJkT251cGZEM3RmMXAKd2RXZ2M2d1FRNFRjMHZabThyN3lsZjNKOTY4azBnNXNSblB4S28vR2RrWDFGVlZJL0NIVHRCV1A2T1FmZGVoYwphSHRqUitwSlZhQXk3SC9MZy85aDlnNjBBNGR0dzBoSTZDeGF3UGdzNmttZytlVFhSdWJWdmlZbmFLb0tWTXViCno3S0JEZGpYWkVLL3pNUTBMQW01RWxoQXhiNlFaRktvRHJrdXUzSkZKU1czbU9xUG11V1AvZjhOSTBpczZzOHcKLy9xM0VTMDZIVzJwNlFBS0VzeGhqYWJZL2cwRklWaXBoeDVNaU1oWkxZSVdwbHlVM0p6cWhQSHZZVTBreThOWgpWTGRwZEZielBGSzZ6dFBmb2tGZW0zY1RTOGVqMnF5aXluZWlESjB0NURLWHFFVTV0MEJGczZmUGhZbGtOV0U9Ci0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg==",
+                "cluster_ca_certificate": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUU2RENDQXRDZ0F3SUJBZ0lRQ3IxSy9CUGpvZWZlQVlMWVlTcHVEakFOQmdrcWhraUc5dzBCQVFzRkFEQU4KTVFzd0NRWURWUVFERXdKallUQWdGdzB5TXpFd01ERXhNREV6TXpkYUdBOHlNRFV6TVRBd01URXdNak16TjFvdwpEVEVMTUFrR0ExVUVBeE1DWTJFd2dnSWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUNEd0F3Z2dJS0FvSUNBUUN6CnJsNWIyWlVJWEZNQWlyNnFVMG1obllGVm9pbFBQeVpjUUgzYkF2MStnSUtmcHorLytxM2l5TXdTT2tKWDQ4Zk0KUkRzc2ptaVJmYnRkcnZ1RHBZRWY2ZzFsMjk4K3BhZGsrZk84WmpuTm0xUmVUdHFWeVg5S05PSThoYTFZZFUvagpGTnJobjBBNkVPdTRMMTl6UWgrN1FzYUltc1RzYWNYSmt0SW00RkRrbW1ndXJXMWk1TzFkZkE1N1dncExCaG03Ck1sR3FGaDNPciswcENWUi9IZ2lGTjZRRStsK3ZoZU13bUM1aVhBSDU0VEEvUUJhTGtmbWVmMmQwcjMrL0ZwYVgKQ0N2V1JUL1kvRDcwa1FFV3VoVGMrdm5yTi92YXBQTmlHbE5HbEoxWDhBTmZVYTE5b2VuZ3psZUFkV1NHUXhsMgpyb2VGWVpVYnpvT3pRY3E3ZzR4Tmx0T1d6RXltNkpORk5hTEs0Y3B4VFRjbmRXUTY3RXNqZ0lUcU9mUU9MNWo5ClFIY1dybm5EOE92b3NrcjZzVGpadFVRU3NYRDMzVkY1cW5VMTF6WHdyU0NTTW1URFlydFM3Sm9ObitYWFRQVWIKeW9OZVJoaWxXcFRxeEtGSmNnQkRuWnBtY1FlbEd1NTNXd0FsQ3pEZ1YyNmM4NVBpQURIdW5lamJKelRya2VOcQpOTk0rTlNsb1B3TVd0Sll2REpJVllUbGtCSDhZQ3NHbkNpMlJWZGlsbXQyaFJpM29wenlSWlBtbFdHcTk1a211CnZGM29IRnRNWHJZdUk0ais4RFNoMFAwTXpKM3p6VzgzWlNDZ2s5TVdybU9hZE9Lc09La0VxbzhUUGxsb0V6WVIKSjgyTmpheGMrV0luVklyOE9HdU1MUExPNk95SlVNM0hxRWdWcW1wYTl3SURBUUFCbzBJd1FEQU9CZ05WSFE4QgpBZjhFQkFNQ0FxUXdEd1lEVlIwVEFRSC9CQVV3QXdFQi96QWRCZ05WSFE0RUZnUVVKKzNDbW12TXFhT3UrWWhkCi9SbmNZRTM1aW9rd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dJQkFISDhHZHkrUTVvQ3ZUcG5xNWlhYWMwd1c0TmIKdStTdkc0aWxHbUlNYzhsQUx5VjNmQTBJWVVFdVd4YWk4WVE0N3FNclFNVE1BN0VWaW9NQlEzNDRaK29EdUxlTApRUDV1WFdtejBlZ293b1piL2NmcTR4MS9ueG5OQit6VnpweDZacFZmQm1qNjNzUWJ0NFZkOUFPUzZ1Y0J1SHdvCndKZVZqMmpCN25sQm1ZSHl2N1RkMUk1YURpMTF3SVZCeS90S29ibTJveHoxZGJReno0MzFmelhqS1dhVlNTTXUKMmZ2RkFXNDU1MCtlU2ZGc0l2Rkc1L3IxOFlEMkRXeFRMUFA5dDl5aHNZQlovMTU1SXdlbTM3ejRUNGNUNHdMQwo1a25MeVI5NkhSY0dvQmFPaDBPU0tNRnUwc1lRdEVFUWFFMWgrSEFUejJ0RGFMdXZpTHBjclQ5WlU2S25NRHZQCmtsU3ZJQVJyNlBoR2c1NTVTcGpOWlh6eldudUVwcGttelhPWU8vdjFlcWp0Y2VNSlJvcU5mOGpYcWhobTJrNHcKK1puR01EdDM2K2tvSU1VUVlpZlNTRlEvT2p4NkprMW1VaFppanhqcndSWWlyNHVBQ29tV2NHZXJZUWtMVDdDTApaclllaktTdGcvQWV2eWxzK1l6ckVISm1rT2VSMFJFVlE4RXFSUllVRjh6UGVzVTN0OG9UK0l3VE1tcTUxWlQ3CkQ1UTU1cGYzRTNpUTd6cUN5K2hENnZYdThXMGtodGd1cWRCeVNYOEl5czBUWGtRV3ZOUE85b3pab1Y4NHRBYTYKS0xncVZDQ0NnNEJXay9oWmVhbnZ3ZzJPTzZKcVVRTElzNDVCQ01UTUtkeTkvcUZTcDQ5bjNHZFdIQWxXREtleQpUNFhqTGJ3THJ6Wm1nak50Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K",
+                "host": "https://marius-dns-dk9rt2l3.hcp.eastus.azmk8s.io:443",
+                "password": "pus7f8373hy9hrumoc1mj21hdxks41gx5eqm54ihre609bubyb5smezmn5k8s9ixil11uha4rryw008veatkozbx7ms4o3cr49r0kh0cqqta7f4n3yy9rdn1gubv024k",
+                "username": "clusterUser_Marius_S_rg_Marius_KC"
+              }
+            ],
+            "kube_config_raw": "apiVersion: v1\nclusters:\n- cluster:\n    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUU2RENDQXRDZ0F3SUJBZ0lRQ3IxSy9CUGpvZWZlQVlMWVlTcHVEakFOQmdrcWhraUc5dzBCQVFzRkFEQU4KTVFzd0NRWURWUVFERXdKallUQWdGdzB5TXpFd01ERXhNREV6TXpkYUdBOHlNRFV6TVRBd01URXdNak16TjFvdwpEVEVMTUFrR0ExVUVBeE1DWTJFd2dnSWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUNEd0F3Z2dJS0FvSUNBUUN6CnJsNWIyWlVJWEZNQWlyNnFVMG1obllGVm9pbFBQeVpjUUgzYkF2MStnSUtmcHorLytxM2l5TXdTT2tKWDQ4Zk0KUkRzc2ptaVJmYnRkcnZ1RHBZRWY2ZzFsMjk4K3BhZGsrZk84WmpuTm0xUmVUdHFWeVg5S05PSThoYTFZZFUvagpGTnJobjBBNkVPdTRMMTl6UWgrN1FzYUltc1RzYWNYSmt0SW00RkRrbW1ndXJXMWk1TzFkZkE1N1dncExCaG03Ck1sR3FGaDNPciswcENWUi9IZ2lGTjZRRStsK3ZoZU13bUM1aVhBSDU0VEEvUUJhTGtmbWVmMmQwcjMrL0ZwYVgKQ0N2V1JUL1kvRDcwa1FFV3VoVGMrdm5yTi92YXBQTmlHbE5HbEoxWDhBTmZVYTE5b2VuZ3psZUFkV1NHUXhsMgpyb2VGWVpVYnpvT3pRY3E3ZzR4Tmx0T1d6RXltNkpORk5hTEs0Y3B4VFRjbmRXUTY3RXNqZ0lUcU9mUU9MNWo5ClFIY1dybm5EOE92b3NrcjZzVGpadFVRU3NYRDMzVkY1cW5VMTF6WHdyU0NTTW1URFlydFM3Sm9ObitYWFRQVWIKeW9OZVJoaWxXcFRxeEtGSmNnQkRuWnBtY1FlbEd1NTNXd0FsQ3pEZ1YyNmM4NVBpQURIdW5lamJKelRya2VOcQpOTk0rTlNsb1B3TVd0Sll2REpJVllUbGtCSDhZQ3NHbkNpMlJWZGlsbXQyaFJpM29wenlSWlBtbFdHcTk1a211CnZGM29IRnRNWHJZdUk0ais4RFNoMFAwTXpKM3p6VzgzWlNDZ2s5TVdybU9hZE9Lc09La0VxbzhUUGxsb0V6WVIKSjgyTmpheGMrV0luVklyOE9HdU1MUExPNk95SlVNM0hxRWdWcW1wYTl3SURBUUFCbzBJd1FEQU9CZ05WSFE4QgpBZjhFQkFNQ0FxUXdEd1lEVlIwVEFRSC9CQVV3QXdFQi96QWRCZ05WSFE0RUZnUVVKKzNDbW12TXFhT3UrWWhkCi9SbmNZRTM1aW9rd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dJQkFISDhHZHkrUTVvQ3ZUcG5xNWlhYWMwd1c0TmIKdStTdkc0aWxHbUlNYzhsQUx5VjNmQTBJWVVFdVd4YWk4WVE0N3FNclFNVE1BN0VWaW9NQlEzNDRaK29EdUxlTApRUDV1WFdtejBlZ293b1piL2NmcTR4MS9ueG5OQit6VnpweDZacFZmQm1qNjNzUWJ0NFZkOUFPUzZ1Y0J1SHdvCndKZVZqMmpCN25sQm1ZSHl2N1RkMUk1YURpMTF3SVZCeS90S29ibTJveHoxZGJReno0MzFmelhqS1dhVlNTTXUKMmZ2RkFXNDU1MCtlU2ZGc0l2Rkc1L3IxOFlEMkRXeFRMUFA5dDl5aHNZQlovMTU1SXdlbTM3ejRUNGNUNHdMQwo1a25MeVI5NkhSY0dvQmFPaDBPU0tNRnUwc1lRdEVFUWFFMWgrSEFUejJ0RGFMdXZpTHBjclQ5WlU2S25NRHZQCmtsU3ZJQVJyNlBoR2c1NTVTcGpOWlh6eldudUVwcGttelhPWU8vdjFlcWp0Y2VNSlJvcU5mOGpYcWhobTJrNHcKK1puR01EdDM2K2tvSU1VUVlpZlNTRlEvT2p4NkprMW1VaFppanhqcndSWWlyNHVBQ29tV2NHZXJZUWtMVDdDTApaclllaktTdGcvQWV2eWxzK1l6ckVISm1rT2VSMFJFVlE4RXFSUllVRjh6UGVzVTN0OG9UK0l3VE1tcTUxWlQ3CkQ1UTU1cGYzRTNpUTd6cUN5K2hENnZYdThXMGtodGd1cWRCeVNYOEl5czBUWGtRV3ZOUE85b3pab1Y4NHRBYTYKS0xncVZDQ0NnNEJXay9oWmVhbnZ3ZzJPTzZKcVVRTElzNDVCQ01UTUtkeTkvcUZTcDQ5bjNHZFdIQWxXREtleQpUNFhqTGJ3THJ6Wm1nak50Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K\n    server: https://marius-dns-dk9rt2l3.hcp.eastus.azmk8s.io:443\n  name: Marius_KC\ncontexts:\n- context:\n    cluster: Marius_KC\n    user: clusterUser_Marius_S_rg_Marius_KC\n  name: Marius_KC\ncurrent-context: Marius_KC\nkind: Config\npreferences: {}\nusers:\n- name: clusterUser_Marius_S_rg_Marius_KC\n  user:\n    client-certificate-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUZIVENDQXdXZ0F3SUJBZ0lRVyt5RmlIMkVhYmU0UlJPWm9DSFRXVEFOQmdrcWhraUc5dzBCQVFzRkFEQU4KTVFzd0NRWURWUVFERXdKallUQWVGdzB5TXpFd01ERXhNREV6TXpkYUZ3MHlOVEV3TURFeE1ESXpNemRhTURBeApGekFWQmdOVkJBb1REbk41YzNSbGJUcHRZWE4wWlhKek1SVXdFd1lEVlFRREV3eHRZWE4wWlhKamJHbGxiblF3CmdnSWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUNEd0F3Z2dJS0FvSUNBUUNzUC9LWHBrcUpmMEIwdFgwbjc4bnMKZWh5OExURmdIeXJ3M1UzK1ZKYWxWUWR3WmgvMkU3TVRZZkpRc0Fzai9pZXlmbVlCZlIwZi9nQzZGQ0REclRyVwp3QWRsRExjbnlLeFNXVndIaHVkdEI3dDFFWFRSVjRhbHJpaldnQTVJWWpZME1IN2JNRll6VndZSzJWdTNqSkx2CnJYcFJyeDJuQ3FGbHdTY2NSV2xybk13STd1cTlNN1RJeHIrelpRbDNIb2g4ellZa2FFaDZ2STd0cUlVTUFEQmgKZ0kwZFdocENLSVU3UG5ubk5sejJORCtKOXpzTEhjTWhocEl4SG54UXlkNWp6QUx4UVpBK1Q5N0xQNWVoZysrbApoemVjTzJWd2p2a0JsdEdGVEQrWWZRQU4rZCtpWDZHbVMweTRQa0MwczNvVmhwWTk2NTljbHJ1UGNlNkYxbFk5CjJHbXNOZXQ4ZUlwbDRjbDZ3WVFxQ1VXWnBISy9BbW9zTllvSFZ6Tmx1Ym1OMkp3WWMwQmFwSm5NVUJFSkFqUWYKUSt1WjUvM2NreDZKRzlicmE3MjF6NnBnMk8weVAvTW02Sm1lUFU0V2tkTHI3UndEZGRBTTdtQk95VUpvaHI2VApIOUVhdHpnRkc0VjFqTlZHK0xxeXNSWEtxbWJmSTBrN1pWcGJFa1BzTWhJSXR3N0ZIWjd0aFJHRHVVZ2tJbW9jCmJPRmFxYW90blVBdlcvaTc1OFlZOWFoL0Q5WWs1SWc5aXM0ditpMk9zbHJ6cmFLUHZRWDYrSmxoV1ZqaWFjT3oKS0RQSWdHVUVMcmg2blpZZWNRZWZybXVLVm84bS93d2NSV1I2UmtxYjZGT0c0Njc1VkJUYVJTcTZHOG9GTmlYVgpPdTJaWHV6U1cvbWRoS2V4OSt4WGx3SURBUUFCbzFZd1ZEQU9CZ05WSFE4QkFmOEVCQU1DQmFBd0V3WURWUjBsCkJBd3dDZ1lJS3dZQkJRVUhBd0l3REFZRFZSMFRBUUgvQkFJd0FEQWZCZ05WSFNNRUdEQVdnQlFuN2NLYWE4eXAKbzY3NWlGMzlHZHhnVGZtS2lUQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FnRUFHemNJZXREL3VGQkRsTkNDdU9zZQpac01IaldvVVRoWWVGSHd3TDJFcVpxNjFaZmFpbDlXeC9hZlVkSlhjMnM0ZFpmc0RLb1NJYVNyTlJ4VEdrMjRUCmpySlIwTjdFd0hrQ016ckpINFRCSGZLSUZpeUQ1T1ZaR2F3bU9lZ2FYbmI0VGRydkNZN3RBOHhyQXd0UmNtZVEKR2lhOXZxenEyMmsreDBjVXlQcnBZWXpGNys5QW5wdDhPSGZYaEhNdDdnMS9ZUXplN0lrQTFBSnR0Nk5YZEZhSApURkx1TDJnbUZJNXpuaFh1a0hBQk1mZyt0WE43WjJSTGFPLzBVUjRzVkNrczJEdkF1d0RMZXJVeUNsYklXV0RBClBiakh4dEltM1Q1YS9UWDUreFZBNTYyNUR4OVVCVk50L3FOTm5NVGd3MkJZSzBGZ3M3L3B6elNNVEV2a2NZcnIKNHFLU2VTOUNmaTZKY0pMWGEvY29WTEwxa0doWDl1L3Z1NFQwUGlBSFVxQXQ5TUZqUTJUaUlhT3EvVWt4cnlVYgpEQmUrajczRHVCZGNaVnB5ODNYSTRPaVFqcTFacEJiVGU3S2RRaHVRbjJ3eFc4VkMxNlh6UnFBcEYwanFBOW80ClQxcmszZkJYTjdzNUpwSmpjSTl1ays1cmtvRDdnQWEvczdFVGdzWFhkb1NQYk9WRWFGY05uSlBVTFp1WEdSYXkKRWdmR3FSSDBPUHliY3JiNDBhS29zVXFMWlF4bXhWbU1WbmxXMjB4RFBWSkpRMHZkNUxoVFBFQ1BPOHMrNVVKSApwaFVxVkRrRFhDRDBrSk5BeHlwYU03dHhETWpYQnBJRGxDUUVtd3FTenhaV1RtTE51YTQrbDNRcWkxRlNwVnJaCnBqMmxJL0RvQjhXUXRPd1dyRzhiT3p3PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==\n    client-key-data: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlKS3dJQkFBS0NBZ0VBckQveWw2WktpWDlBZExWOUorL0o3SG9jdkMweFlCOHE4TjFOL2xTV3BWVUhjR1lmCjloT3pFMkh5VUxBTEkvNG5zbjVtQVgwZEgvNEF1aFFndzYwNjFzQUhaUXkzSjhpc1VsbGNCNGJuYlFlN2RSRjAKMFZlR3BhNG8xb0FPU0dJMk5EQisyekJXTTFjR0N0bGJ0NHlTNzYxNlVhOGRwd3FoWmNFbkhFVnBhNXpNQ083cQp2VE8weU1hL3MyVUpkeDZJZk0yR0pHaEllcnlPN2FpRkRBQXdZWUNOSFZvYVFpaUZPejU1NXpaYzlqUS9pZmM3CkN4M0RJWWFTTVI1OFVNbmVZOHdDOFVHUVBrL2V5eitYb1lQdnBZYzNuRHRsY0k3NUFaYlJoVXcvbUgwQURmbmYKb2wraHBrdE11RDVBdExONkZZYVdQZXVmWEphN2ozSHVoZFpXUGRocHJEWHJmSGlLWmVISmVzR0VLZ2xGbWFSeQp2d0pxTERXS0IxY3paYm01amRpY0dITkFXcVNaekZBUkNRSTBIMFBybWVmOTNKTWVpUnZXNjJ1OXRjK3FZTmp0Ck1qL3pKdWlabmoxT0ZwSFM2KzBjQTNYUURPNWdUc2xDYUlhK2t4L1JHcmM0QlJ1RmRZelZSdmk2c3JFVnlxcG0KM3lOSk8yVmFXeEpEN0RJU0NMY094UjJlN1lVUmc3bElKQ0pxSEd6aFdxbXFMWjFBTDF2NHUrZkdHUFdvZncvVwpKT1NJUFlyT0wvb3RqckphODYyaWo3MEYrdmlaWVZsWTRtbkRzeWd6eUlCbEJDNjRlcDJXSG5FSG42NXJpbGFQCkp2OE1IRVZrZWtaS20raFRodU91K1ZRVTJrVXF1aHZLQlRZbDFUcnRtVjdzMGx2NW5ZU25zZmZzVjVjQ0F3RUEKQVFLQ0FnRUFqMmVGN3QrUk9ydm95OEcxZXlSVnRqMUw0eGEwL3RPMENtZ1U0T05Ic0VvRU1YMjBxa2hvVklDOQpIcFFTRWxzc2JaeHlERmMvZ2owVUdkZGNGODBIS1hjaU1PelBKNTRZYVU3Z0lad2MzRmNOcUQ5cVJFZGNZRitJCnZGeE1oOUxNVWRMMktrSXA0Z0JYbFh5MHNUR2x1MGx3aHNVR0tPWGV6VHByOTB1S292OGRsMnBob0RlR0VZbjIKVzhLSWlOV3d5RWJMb1UvNDE4WllNR0NXdEJFTU5vQ3grM2ZpV0tZbmxkVkQ1RTBNUkNYbnFGTmVvcmlhbGpUVgpUWE9XQ0NTb3MrbExvZFAxNVFyVjc5ejN2bzU3WEJJaEtEOERDeHpkRG9lajFCaFE4Z0ZQcEZNZDdxOHpnNkU1Ck5FTVAxK0Y4aUtOT1Bpc0d1Q3o5NWtUeVVoYktJTUZuditkNGkwOXNLamZwaUp0cTlPVWUxcE0zV0VkQzNmU2kKV3VQOS9WdDlKZmlIUlFoUUFTS3hKTGVOckt1NXpwdW83SUlad0VublAvdzRyMjlMSXNtVjFSNUY2VitmWFZTNwpjaWZhdlhmeGZyQUJvQ1JRMkdJcnUwVDFTQzduY2VmZU1Vb2pYRmdrMURJcnRaeXlBNXRNVGtBSVIvNE12OXVpCnBOR0xFbzFlRHBUUDIzajNSWXBNaUh0aG1sYTh4OW1KdGxrYUxaM3RVaTd5QmIvQXhiQTN1aEx2SUdBb3A1Uk4KVkxFMHppQUpKK1J2Umh0UVVaZC9WM2pGMlNramZETTFjZ3hKZHlwN01VRVJpWXlvNVlKUmV3WU12M2JJbVVaYQpleGI3eStnYUd1R3lvWkNqQk9hTkxGYlJ5TFZFZGlydVFlZUgrYlhON2tkNEx6eDlObEVDZ2dFQkFNMVYyYjNjCks5bW9CYWY0d1lwK1pxNzJleDRCR201amZWemJnT1A1WHFNQ1FmV2RMUFI0RGIxaTdzUGVlaCtUMDh4SVlZdjMKb1NRd3hNWVpmN21aV0dlQjF6bFoyc0RJOEZONzFWaGV0WjBvNTFobk50ekJXdFE2blRtMXNoektpQnRpNkl2NgpXS2RkYWFLOG5NdVhKTWxWSmZhcGdGdmVCQi9TdEpHaU8yNjA5VGQxSHUzdXJVblg5L3RtUmp0YUNkRkhPZkN0Ckd4UkVNeFlVRTM4UndyZCtwcERVazRBUk1GZXptbWFmWGJBYW82bFAvZXBQN2Q0RWlxT1JTcUxobDN6K01tNzYKaUJiY1FDVkxHeXJTcnpBUlFNOTA5aEUraStEVUQxbitXU1B1TkVJNURVNkpOZ2FXZHhsTkliaCsybExBejVldAp3N2Jwbm9SQkRTbXpqV3NDZ2dFQkFOYkFPWlVCdmdSeXBQaXFKT2lZTndSeXgzaWhuWWN6MHFYbEljS1UzYm93CmJPRzVJQWNmM1FrUGVaUWJNUDVhWktXSk9lY3FtaDRnZWtWYVJkbmNjQUNSUkdFdjVNcUYzRXA1U3FYTDZUdlYKL00zVlhxaEYrUGJIY2ZRM2VWVnV3RjlMSkZoUlZ3SEtVY0RtM2Fkd29iQ0ozTnpaQmpRYnJkZi81SDI1SHhZdQpyR1R5dGF6VDNwZy9Db2JraUhybVRYUEhlSkh6REE5TXg1VGxCVU5SSFhBYlhYWTFOZGpsQi9wTW41KzZoaFFjCnJGUFRnREtRbXdHL1Y4Wk1ZaldiK2Z5c0EzVGJ6QVAwbTlxYzY5ZUlMRkd3d0xrbHRSVmRhSWtINHJ6NG0vaGgKMFdnejdkT29pVm81T2FLa0UrTThhNHMxRzVQN3Fvb0o3S1BuQjZiTVhZVUNnZ0VCQUkvOUpOeTd1VkEvUUFBagpNMjB2NkVmRzlsejYveExyMTJ3M1RQSVEyNmxKbXdGbWY3RExReTlNWWd5ZVJWdEJhYU4yR2xseGcrR0NCV3E1ClZOVE0wSzU4NFhVSktwcElEaWNzemxYU3pGNXg0WkVmaDl4VUJxS09tOVJ0TW9KNEQrdk1kekE1bE5PQWNPUTYKaVdWSER2ZlVLdlFHdHNrMUxnVTIxNExNbGdxekFNWXI3azJCTXFsMnRpSG4vVlgvZEtUNTRvcUFpVjJ6MlhNaApEdTdyZ0hUMmJrMWZsRE9aV2lJV0F5NzFrRmcreGdlajNYWGpLUFdvajZQVjdkVzhobU9UU2NDREZNMmJFNnhUCk43RFczeHpBN0liT0NRUGNyWEF5cExWQjVEYUxBc0J4aTRCSVBjZHUyZ08zRCs5MW5SbXN0YVl5cHV6c2RFbGYKNktBV2xoTUNnZ0VCQUs4MXVrVkdYS0FJWVd5NGROQ0lrQ3JDOHRnTEZCbGhRTFkxVWV3TnhUSEpuS3cxZkZvVAp0eVZUU09CN3B1ZC9IS3FxWVdHbnNvSnVBUlJnYUtrdFh2dzNpVkM1NExNVHIvM2JJL3BOZWdkbHVaSytTVEtGCmxIRFRuTGVpSXc1L0E5azcxM1Z2Tjh1d0pDOThyTStWNTNXL3BVRlNsK3Nmd2lCL0dROHlZSmlhai9EMHpTRXEKNDJ2WDAyRG5TQ3J0aDdlMHdUeGl6aTRWZUtpVWlreTMrNHFoNlFrdXRMWTNkdURTYjFIRXZ1dmQwUU83aGRhNwpnSnhXWHVqZEhTdWNETVFJRy9IVitvZ25wSmtpZXBFbyt1L1RoQW9MSjhrOG9yTmFpYldnS0xEb0xoQVVmaSs0ClRBZ2V0RlZzQlFYYkgrczk4emd6bHBwMUttczNiVmk3V0hrQ2dnRUJBS3lWTjIya3dRUjJkT251cGZEM3RmMXAKd2RXZ2M2d1FRNFRjMHZabThyN3lsZjNKOTY4azBnNXNSblB4S28vR2RrWDFGVlZJL0NIVHRCV1A2T1FmZGVoYwphSHRqUitwSlZhQXk3SC9MZy85aDlnNjBBNGR0dzBoSTZDeGF3UGdzNmttZytlVFhSdWJWdmlZbmFLb0tWTXViCno3S0JEZGpYWkVLL3pNUTBMQW01RWxoQXhiNlFaRktvRHJrdXUzSkZKU1czbU9xUG11V1AvZjhOSTBpczZzOHcKLy9xM0VTMDZIVzJwNlFBS0VzeGhqYWJZL2cwRklWaXBoeDVNaU1oWkxZSVdwbHlVM0p6cWhQSHZZVTBreThOWgpWTGRwZEZielBGSzZ6dFBmb2tGZW0zY1RTOGVqMnF5aXluZWlESjB0NURLWHFFVTV0MEJGczZmUGhZbGtOV0U9Ci0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg==\n    token: pus7f8373hy9hrumoc1mj21hdxks41gx5eqm54ihre609bubyb5smezmn5k8s9ixil11uha4rryw008veatkozbx7ms4o3cr49r0kh0cqqta7f4n3yy9rdn1gubv024k\n",
+            "kubelet_identity": [
+              {
+                "client_id": "619e7ca9-932a-493b-bc69-6b1af82fabd8",
+                "object_id": "c19e4893-0d8c-4b0c-8a42-4ccea2c568e5",
+                "user_assigned_identity_id": "/subscriptions/3a42b7ad-f305-4fa5-9a8a-9310a9c7f4ad/resourceGroups/MC_Marius_S_rg_Marius_KC_eastus/providers/Microsoft.ManagedIdentity/userAssignedIdentities/Marius_KC-agentpool"
+              }
+            ],
+            "kubernetes_version": "1.26.6",
+            "linux_profile": [],
+            "local_account_disabled": false,
+            "location": "eastus",
+            "maintenance_window": [],
+            "name": "Marius_KC",
+            "network_profile": [
+              {
+                "dns_service_ip": "10.0.0.10",
+                "docker_bridge_cidr": "172.17.0.1/16",
+                "load_balancer_profile": [
+                  {
+                    "effective_outbound_ips": [
+                      "/subscriptions/3a42b7ad-f305-4fa5-9a8a-9310a9c7f4ad/resourceGroups/MC_Marius_S_rg_Marius_KC_eastus/providers/Microsoft.Network/publicIPAddresses/27017af8-c8d0-49c7-9070-d9ed78b5b28a"
+                    ],
+                    "idle_timeout_in_minutes": 0,
+                    "managed_outbound_ip_count": 1,
+                    "outbound_ip_address_ids": [],
+                    "outbound_ip_prefix_ids": [],
+                    "outbound_ports_allocated": 0
+                  }
+                ],
+                "load_balancer_sku": "standard",
+                "nat_gateway_profile": [],
+                "network_mode": "",
+                "network_plugin": "kubenet",
+                "network_policy": "",
+                "outbound_type": "loadBalancer",
+                "pod_cidr": "10.244.0.0/16",
+                "service_cidr": "10.0.0.0/16"
+              }
+            ],
+            "node_resource_group": "MC_Marius_S_rg_Marius_KC_eastus",
+            "oms_agent": [],
+            "open_service_mesh_enabled": false,
+            "portal_fqdn": "marius-dns-dk9rt2l3.portal.hcp.eastus.azmk8s.io",
+            "private_cluster_enabled": false,
+            "private_cluster_public_fqdn_enabled": false,
+            "private_dns_zone_id": "",
+            "private_fqdn": "",
+            "public_network_access_enabled": true,
+            "resource_group_name": "Marius_S_rg",
+            "role_based_access_control_enabled": true,
+            "service_principal": [],
+            "sku_tier": "Free",
+            "tags": {},
+            "timeouts": null,
+            "windows_profile": []
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjo1NDAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIyIn0="
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
